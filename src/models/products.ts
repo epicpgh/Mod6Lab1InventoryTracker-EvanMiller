@@ -4,7 +4,7 @@
 //getPriceWithTax() - a method that calculates the final price of the product with tax.
 
 
-export class Product {
+export default class Product {
     sku: string;
     name: string;
     price: number;
