@@ -11,12 +11,20 @@ constructor(sku: string, name: string, price: number, fileSize: number){
 }
 
 displayDetails(): string {
-    return `${this.sku} name: ${this.name} costs $${this.price} and download is ${this.fileSize}` ;
+    return `${this.sku} name: ${this.name} costs $${this.price} and download  size is ${this.fileSize}` ;
 }
 
-getPriceWithTax(taxRate: number = .1): number {
-    return this.price * (1 + taxRate);
-}
+getPriceWithTax(): number {
+    return this.price;
 }
 
-console.log(DigitalProduct);
+
+get formattedFileSize(): string {
+    const megabytes = this.fileSize / (1024 * 1024); 
+    return `${megabytes.toFixed(2)} MB`;
+  }
+
+  
+}
+
+

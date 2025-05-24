@@ -16,4 +16,10 @@ displayDetails(): string {
 getPriceWithTax(taxRate: number = .1): number {
     return this.price * (1 + taxRate);
 }
+get formattedWeight(): string {
+    return `${(this.weight / 1000).toFixed(2)} kg`;
+  }
+
+  
 }
+
